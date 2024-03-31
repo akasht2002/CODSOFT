@@ -1,0 +1,46 @@
+package CodeSoft;
+
+import java.util.*;
+public class Result {
+	static void getResult(int a,int b,int c,int d) {
+		int sum=a+b+c;
+		int avg=sum/4;
+		System.out.println("The marks is "+avg);
+		System.out.println("The marks is "+sum);
+		if(a<35 ||b<35 ||  c<35 || d<35) {
+			System.out.println("Grade is F");
+		}
+		else if(avg>=90) {
+			System.out.println("The grade is A");
+		}
+		else if(avg>=80 && avg<90) {
+			System.out.println("The grade is B");
+		}
+		else if(avg>=70 && avg<80) {
+			System.out.println("The grade is C");
+		}
+		else if(avg>=60 && avg>70) {
+			System.out.println("The grade is D");
+		}
+		else if(avg>=35 && avg<60) {
+			System.out.println("The grade is E");
+		}
+		else {
+			System.out.println("The grade is F");
+		}
+	}
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter marks of Maths: ");
+		int m=sc.nextInt();
+		System.out.println("Enter marks of Pysics: ");
+		int p=sc.nextInt();
+		System.out.println("Enter marks of Chemistry: ");
+		int c=sc.nextInt();
+		System.out.println("Enter marks of English: ");
+		int e=sc.nextInt();
+		System.out.println("The result is: ");
+		getResult(m,p,c,e);
+	}
+
+}
